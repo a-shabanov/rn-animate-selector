@@ -1,0 +1,36 @@
+{
+  "name": "@nexcella/rn-animated-selector",
+  "version": "0.0.2",
+  "description": "Animated selector for react native",
+  "main": "dist/index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "prepublish": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/a-shabanov/rn-animate-selector.git"
+  },
+  "keywords": [
+    "react-native",
+    "selector",
+    "animation"
+  ],
+  "author": "Andrey Shabanov <a.shabanov.develop@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-shabanov/rn-animate-selector/issues"
+  },
+  "types": "dist/index.d.ts",
+  "private": false,
+  "homepage": "https://github.com/a-shabanov/rn-animate-selector#readme",
+  "devDependencies": {
+    "typescript": "3.5.3"
+  },
+  "dependencies": {
+    "@types/react": "16.8.23",
+    "@types/react-native": "0.60.2",
+    "react": "16.8.6",
+    "react-native": "0.60.4"
+  }
+}
