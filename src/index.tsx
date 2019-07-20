@@ -1,1 +1,1 @@
-export {Selector} from "./components/Selector";
+export {Selector} from "./components/selector";

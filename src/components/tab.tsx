@@ -1,5 +1,5 @@
+import * as React from 'react'
 import {GestureResponderEvent, StyleSheet, Text, View} from "react-native";
-import React from "react";
 
 const SWIPE_DELTA = 15;
 

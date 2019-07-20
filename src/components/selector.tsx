@@ -1,6 +1,6 @@
-import React from "react";
+import * as React from 'react'
 import {Animated, Easing, StyleSheet, Text, View} from "react-native";
-import Tab from "./Tab";
+import Tab from "./tab";
 
 interface Props {
     tabs: string[],

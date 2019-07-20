@@ -1,11 +1,11 @@
 {
   "name": "@nexcella/rn-animated-selector",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "Animated selector for react native",
   "main": "dist/index.js",
   "scripts": {
-    "tsc": "tsc",
-    "prepublish": "tsc"
+    "build": "tsc",
+    "prepublish": "build"
   },
   "repository": {
     "type": "git",
@@ -25,12 +25,15 @@
   "private": false,
   "homepage": "https://github.com/a-shabanov/rn-animate-selector#readme",
   "devDependencies": {
-    "typescript": "3.5.3"
-  },
-  "dependencies": {
     "@types/react": "16.8.23",
     "@types/react-native": "0.60.2",
-    "react": "16.8.6",
-    "react-native": "0.60.4"
-  }
+    "typescript": "3.5.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "files": [
+    "dist/**/*"
+  ]
 }
