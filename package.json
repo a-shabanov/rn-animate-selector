@@ -1,11 +1,12 @@
 {
   "name": "@nexcella/rn-animated-selector",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Animated selector for react native",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "prepublish": "build"
+    "prepublish": "npm run build",
+    "postversion": "git push — tags origin master"
   },
   "repository": {
     "type": "git",
