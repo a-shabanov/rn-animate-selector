@@ -1,6 +1,6 @@
 {
   "name": "@nexcella/rn-animated-selector",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Animated selector for react native",
   "main": "dist/index.js",
   "scripts": {
