@@ -4,7 +4,8 @@ import Tab from "./tab";
 
 interface Props {
     tabs: string[],
-    onSelect?: (index: string) => void
+    onSelect?: (index: string) => void,
+    color?: string
 }
 
 interface State {
@@ -17,6 +18,10 @@ interface State {
 export class Selector extends React.PureComponent<Props, State> {
     private tabRefs: Array<View | null> = [];
     private performView: View | null = null;
+
+    static defaultProps = {
+        color: '#54B3D4'
+    };
 
     constructor(props: Props) {
         super(props);
@@ -107,7 +112,7 @@ export class Selector extends React.PureComponent<Props, State> {
     };
 
     render() {
-        const {tabs} = this.props;
+        const {tabs, color} = this.props;
         const {performPosition, performWidth, activeIndex} = this.state;
 
         return (
@@ -120,10 +125,14 @@ export class Selector extends React.PureComponent<Props, State> {
                 </View>
                 <Animated.View
                     ref={(ref: View) => this.performView = ref}
-                    style={[styles.performContainer, {left: performPosition, width: performWidth}]}
+                    style={[styles.performContainer, {
+                        left: performPosition,
+                        width: performWidth,
+                        backgroundColor: color
+                    }]}
                     pointerEvents={'none'}
                 >
-                    <Text style={{color: 'white'}}>{activeIndex ? tabs[activeIndex] : ''}</Text>
+                    <Text style={{color: 'white'}}>{activeIndex != null ? tabs[activeIndex] : ''}</Text>
                 </Animated.View>
             </View>
         );
@@ -132,7 +141,6 @@ export class Selector extends React.PureComponent<Props, State> {
 
 const styles = StyleSheet.create({
     performContainer: {
-        backgroundColor: '#54B3D4',
         borderRadius: 6,
         position: 'absolute',
         flex: 1,
