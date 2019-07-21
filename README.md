@@ -1,8 +1,11 @@
 # Animated selector for React Native 
 ![](https://img.shields.io/npm/types/typescript.svg)
 
+
 A ```<Selector/>``` component for react native projects. 
-Work like RadioButton
+Work like RadioButton. 
+
+*Support left & right swipe on tabs for selecting option*
 
 ![Example](https://github.com/a-shabanov/rn-animate-selector/blob/master/example/selector.gif?raw=true)
 ![Example-Orange](https://github.com/a-shabanov/rn-animate-selector/blob/master/example/selector-orange.gif?raw=true)
