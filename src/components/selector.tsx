@@ -18,7 +18,7 @@ interface State {
 export class Selector extends React.PureComponent<Props, State> {
     private tabRefs: Array<View | null> = [];
     private performView: View | null = null;
-
+    private selectorRef: View | null = null;
     static defaultProps = {
         color: '#54B3D4'
     };
@@ -49,7 +49,7 @@ export class Selector extends React.PureComponent<Props, State> {
         }
 
         // @ts-ignore
-        this.tabRefs[index].measure((x, y, width, height) => {
+        this.tabRefs[index].measureLayout(this.selectorRef, (x, y, width, height) => {
             // @ts-ignore
             this.performView.setNativeProps({height: height + 10});
             if (index == this.state.activeIndex) {
@@ -99,7 +99,7 @@ export class Selector extends React.PureComponent<Props, State> {
         const {tabs} = this.props;
         const {activeIndex} = this.state;
         return (
-            <View ref={tab => this.tabRefs[index] = tab}>
+            <View ref={tab => this.tabRefs[index] = tab} style={{marginLeft: 8, marginRight: 8}}>
                 <Tab
                     key={`tab_${index}`}
                     index={index}
@@ -119,8 +119,8 @@ export class Selector extends React.PureComponent<Props, State> {
             <View style={{marginTop: 20}}>
                 <View style={{
                     flexDirection: "row",
-                    justifyContent: "space-between",
-                }}>
+                    justifyContent: "center",
+                }} ref={ref => this.selectorRef = ref}>
                     {tabs.map((text, index) => this.renderTab(index))}
                 </View>
                 <Animated.View
