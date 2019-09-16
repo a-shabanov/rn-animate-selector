@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "postversion": "npm run build",
+    "postversion": "npm run publish",
     "prepublish": "npm run build",
     "postpublish": "git push --follow-tags"
   },
